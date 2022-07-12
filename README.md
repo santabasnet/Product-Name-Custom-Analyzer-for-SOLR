@@ -4,7 +4,7 @@ Various e-commerce sites requires synonym based query analysis with custom token
 
 - Product Name Analysis:
   ```Scala
-          String productWord = "babysoaps75ml";
+        String productWord = "babysoaps75ml";
         String result = new ProductStemmer().stem(productWord);
         System.out.println("Result: " + result);
         /**
