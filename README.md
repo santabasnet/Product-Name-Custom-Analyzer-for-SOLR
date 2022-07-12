@@ -52,3 +52,22 @@ Various e-commerce sites requires synonym based query analysis with custom token
         * */
   ```
 - Word Expansion Tokenizer:
+  ```Scala
+        System.out.println("Tokens : " + new WordExpansionTokenizer("75ml").getTokens());
+        System.out.println("Tokens : " + new WordExpansionTokenizer("75").getTokens());
+        System.out.println("Tokens : " + new WordExpansionTokenizer("ml75").getTokens());
+        /**
+        * Tokens : [75, ml, 75ml]
+        * Tokens : [75]
+        * Tokens : [ml, 75, ml75]
+        * */
+  ```
+- EdgeNGrams Analysis:
+  ```Scala
+        String givenWord = "sugar5kg";
+        List<String> result = new EdgeNGrams(givenWord).tokenize();
+        System.out.println(result);
+        /**
+        * [suga, ugar, sugar]
+        * */
+  ```
